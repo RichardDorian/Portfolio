@@ -1,0 +1,38 @@
+html {
+  --lorem: 1;
+}
+
+html[data-theme='dark'] {
+  --background-1: #0d2431;
+  --background-2: #183d3d;
+  --background-3: #5c8374;
+  --primary: #93b1a6;
+  --secondary: #d4ede4;
+  --secondary-hover: #8fdcc2;
+  --indicator: #8fdcc21a;
+}
+
+body {
+  background: linear-gradient(
+    -45deg,
+    var(--background-1),
+    var(--background-2),
+    var(--background-3)
+  );
+  background-size: 400% 400%;
+  animation: gradient 45s ease infinite;
+  height: 100vh;
+  color: var(--primary);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

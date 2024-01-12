@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 150px;
+
+  & > h1 {
+    font-weight: 700;
+    font-size: 170px;
+    line-height: 170px;
+    letter-spacing: -5px;
+  }
+}

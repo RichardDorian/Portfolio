@@ -1,0 +1,20 @@
+{
+  "out": "/build",
+  "index": "/index.html",
+  "assets": "/assets",
+  "locales": "/locales",
+  "scripts": "/scripts/*.js",
+  "pages": [
+    {
+      "name": "About",
+      "file": "/pages/about.html",
+      "route": "/about"
+    },
+    {
+      "name": "Projects",
+      "file": "/pages/projects.html",
+      "route": "/projects"
+    }
+  ],
+  "cssEntry": "/styles/index.css"
+}

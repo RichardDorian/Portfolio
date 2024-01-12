@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Dorian • Developer</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <script src="/scripts/i18n.js" type="module"></script>
+    <script src="/scripts/router.js"></script>
+    <script src="/scripts/icons.js"></script>
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="indicator"></div>
+        <ul>
+          <li id="theme-toggle">
+            <svg-icon src="/assets/light_mode.svg" color="var(--secondary)" />
+          </li>
+          <li id="home" class="selectable">
+            <a href="/" data-i18n="home"></a>
+          </li>
+          <li id="about" class="selectable">
+            <a href="/about" data-i18n="about"></a>
+          </li>
+          <li id="projects" class="selectable">
+            <a href="/projects" data-i18n="projects"></a>
+          </li>
+          <li><a href="#resume" data-i18n="resume"></a></li>
+          <li><a href="#contact-me" data-i18n="contact"></a></li>
+          <li>
+            <svg-icon src="/assets/translate.svg" color="var(--secondary)" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="special-font">
+        Hello there <br />
+        I'm Dorian.
+      </h1>
+      <h3>A developer, a student. One passionate about what he's doing</h3>
+      <section>
+        <h2 class="special-font">Projects</h2>
+      </section>
+    </main>
+    <footer>
+      <div id="find-me" class="link-list">
+        <h3 data-i18n="find-me-on"></h3>
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/RichardDorian">
+              <svg-icon src="/assets/github.svg"></svg-icon>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/richard-dorian/"
+            >
+              <svg-icon src="/assets/linkedin.svg"></svg-icon>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="resume">
+        <button>
+          <svg-icon
+            src="/assets/download.svg"
+            color="var(--content-color)"
+          ></svg-icon>
+          <span data-i18n="download-resume"></span>
+        </button>
+      </div>
+      <div id="copyright">
+        <p>© 2024 RICHARD Dorian</p>
+      </div>
+      <div id="contact-me" class="link-list">
+        <h3 data-i18n="contact-me"></h3>
+        <ul>
+          <li>
+            <svg-icon src="/assets/mail.svg"></svg-icon>
+            <span>
+              Mail:
+              <a href="mailto:richard.dorian@outlook.com">
+                richard.dorian@outlook.com
+              </a>
+            </span>
+          </li>
+          <li>
+            <svg-icon src="/assets/phone.svg"></svg-icon>
+            <span> Phone: +33 6 11 22 33 44 </span>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

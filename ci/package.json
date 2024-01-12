@@ -1,0 +1,17 @@
+{
+  "name": "@richarddorian/portfolio-ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RichardDorian",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.19.11",
+    "html-minifier": "^4.0.0",
+    "node-html-parser": "^6.1.12"
+  }
+}

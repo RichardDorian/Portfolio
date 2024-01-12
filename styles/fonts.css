@@ -1,0 +1,8 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.special-font {
+  font-family: 'Sansita Swashed', system-ui;
+  font-weight: 900;
+}
