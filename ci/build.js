@@ -80,3 +80,6 @@ for (const page of config.pages) {
     )
   );
 }
+
+// Copy robots.txt
+await cp(resolveConfigPath(config.robots), join(outDir, 'robots.txt'));

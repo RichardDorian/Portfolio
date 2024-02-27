@@ -16,5 +16,6 @@
       "route": "/projects"
     }
   ],
-  "cssEntry": "/styles/index.css"
+  "cssEntry": "/styles/index.css",
+  "robots": "/robots.txt"
 }

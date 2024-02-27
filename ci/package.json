@@ -5,11 +5,15 @@
   "main": "build.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "watch": "node watch.js",
+    "serve": "esbuild --servedir=../build"
   },
   "author": "RichardDorian",
   "license": "MIT",
   "dependencies": {
+    "chokidar": "^3.6.0",
     "esbuild": "^0.19.11",
     "html-minifier": "^4.0.0",
     "node-html-parser": "^6.1.12"

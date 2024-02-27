@@ -1,4 +1,5 @@
 {
+  const pageCache = new Map();
   const domParser = new DOMParser();
   let currentMain = '/index.html';
 
@@ -15,10 +16,12 @@
     {
       path: '/about',
       file: '/pages/about.html',
+      title: 'About me',
     },
     {
       path: '/projects',
       file: '/pages/projects.html',
+      title: 'Projects',
     },
   ];
 
@@ -27,12 +30,19 @@
     history.replaceState({}, '', route.redirectTo ?? route.path);
 
     if (route.file !== currentMain) {
-      const response = await fetch(route.file);
-      const text = await response.text();
-      const doc = domParser.parseFromString(text, 'text/html');
-
+      if (!pageCache.has(route.file)) {
+        const response = await fetch(route.file);
+        pageCache.set(route.file, await response.text());
+      }
+      const doc = domParser.parseFromString(
+        pageCache.get(route.file),
+        'text/html'
+      );
+      console.log(doc);
       currentMain = route.file;
       document.querySelector('main').replaceWith(doc.querySelector('main'));
+      document.title =
+        (route.title ? `${route.title} • ` : '') + 'Richard Dorian • Developer';
     }
 
     document.dispatchEvent(new CustomEvent('navigated', { detail: route }));

@@ -33,7 +33,7 @@
     setTimeout(() => {
       indicator.style.transition =
         indicator.computedStyleMap().get('transition').toString() +
-        ', left 0.2s ease-in-out';
+        ', left 0.2s ease-in-out, width 0.2s ease-in-out';
     }, 300);
 
     updateIndicator();
