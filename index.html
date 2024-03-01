@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&family=Noto+Sans&display=swap"
       rel="stylesheet"
     />
+    <meta name="description" content="TODO" />
     <meta name="og:title" content="Richard Dorian • Developer" />
     <meta name="og:type" content="profile" />
     <meta name="profile:first_name" content="Dorian" />
@@ -24,6 +25,9 @@
     <meta name="og:locale" content="en_US" />
     <meta name="og:locale:alternate" content="fr_FR" />
     <meta name="og:site_name" content="Richard Dorian • Developer" />
+    <link rel="prefetch" as="document" href="/pages/about.html" />
+    <link rel="prefetch" as="document" href="/pages/projects.html" />
+    <link rel="prefetch" as="document" href="/index.html" />
   </head>
   <body>
     <header>
@@ -42,13 +46,19 @@
           <li id="projects" class="selectable">
             <a href="/projects" data-i18n="projects"></a>
           </li>
-          <li><a href="#resume" data-i18n="resume"></a></li>
-          <li><a href="#contact-me" data-i18n="contact"></a></li>
+          <li><a id="resume-nav" data-i18n="resume"></a></li>
+          <li><a data-i18n="contact"></a></li>
           <li>
             <svg-icon src="/assets/translate.svg" color="var(--secondary)" />
           </li>
         </ul>
       </nav>
+      <div id="lang-selector">
+        <input type="radio" name="lang-selector" id="lang-selector-en" />
+        <label for="lang-selector-en">English</label>
+        <input type="radio" name="lang-selector" id="lang-selector-fr" />
+        <label for="lang-selector-fr">Français</label>
+      </div>
     </header>
     <main>
       <h1 class="special-font">

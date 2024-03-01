@@ -11,20 +11,22 @@
     indicator.style.left = boundingBox.left - INDICATOR_PADDING + 'px';
   }
 
+  window.addEventListener('resize', updateIndicator);
+
   const navItemToRoute = {
     '/': nav.querySelector('li.selectable#home'),
     '/about': nav.querySelector('li.selectable#about'),
     '/projects': nav.querySelector('li.selectable#projects'),
   };
 
-  const updateNavBasedOnNav = (route) =>
+  const updateSelectedNavEl = (route) =>
     (selected = navItemToRoute[route.redirectTo ?? route.path]);
 
   document.addEventListener('navigated', (event) =>
-    updateNavBasedOnNav(event.detail)
+    updateSelectedNavEl(event.detail)
   );
   if (window.requireNavUpdate) {
-    updateNavBasedOnNav(window.requireNavUpdate);
+    updateSelectedNavEl(window.requireNavUpdate);
     delete window.requireNavUpdate;
   }
 
@@ -55,28 +57,13 @@
 }
 
 {
-  const focusButton = document.querySelector('li > a[href="#resume"]');
+  const focusButton = document.querySelector('li > a#resume-nav');
   const downloadResume = document.querySelector('div#resume > button');
 
-  focusButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    downloadResume.scrollIntoView({ behavior: 'smooth' });
-
-    let interval = setInterval(() => {
-      if (downloadResume.getBoundingClientRect().top < window.innerHeight) {
-        clearInterval(interval);
-
-        downloadResume.focus();
-        downloadResume.classList.add('flash');
-        setTimeout(() => {
-          downloadResume.classList.remove('flash');
-        }, 500);
-      }
-    }, 100);
-  });
-
-  downloadResume.addEventListener('click', () => {
-    const lang = document.documentElement.lang;
-    window.open(`/assets/resume-temp-${lang}.pdf`);
-  });
+  for (const el of [focusButton, downloadResume]) {
+    el.addEventListener('click', () => {
+      const lang = document.documentElement.lang;
+      window.open(`/assets/Resume Dorian RICHARD - ${lang}.pdf`);
+    });
+  }
 }

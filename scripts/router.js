@@ -38,7 +38,6 @@
         pageCache.get(route.file),
         'text/html'
       );
-      console.log(doc);
       currentMain = route.file;
       document.querySelector('main').replaceWith(doc.querySelector('main'));
       document.title =

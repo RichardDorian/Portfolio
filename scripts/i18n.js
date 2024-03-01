@@ -18,6 +18,7 @@ function updateUI(translations, language) {
   }
 
   document.documentElement.lang = language;
+  window.dispatchEvent(new Event('resize'));
 }
 
 const defaultLanguage =
